@@ -1,0 +1,36 @@
+[user]
+	name = Kyle Paulsen
+	email = kyle.a.paulsen@gmail.com
+[color]
+	ui = true
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[push]
+	default = current
+	autoSetupRemote = true
+[alias]
+	l = log --stat --graph --decorate --summary
+	lg = log --stat --graph --decorate --summary
+	loog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	stat = status
+	a = add .
+	s = status
+	d = diff
+	duff = diff
+	wdiff = diff -w --color-words
+	co = checkout
+	c = commit
+	ca = commit --amend --no-edit
+	p = pull
+	r = reset
+	update = pull --rebase origin master
+	hist = log --follow -p --stat --decorate -w
+	recent = "for-each-ref --count=20 --sort=-committerdate refs/heads/ --format='%1B[0;33m%(committerdate)%1B[m %1B[0;32m%(refname:short)%1B[m %(subject)'"
+	cut = "!echo 'Type: `git cutt` to remove these branches:' & git branch --merged master | grep -v master | grep -v \\*"
+	cutt = "!git branch --merged master | grep -v master | grep -v \\* | xargs -n 1 git branch -d"
+	addnw = "!git diff -w --no-color | git apply --cached --ignore-whitespace"
+[core]
+	autocrlf = input
