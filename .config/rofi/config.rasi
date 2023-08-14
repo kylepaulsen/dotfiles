@@ -1,0 +1,6 @@
+configuration {
+    modi: "window,drun";
+    show-icons: true;
+}
+
+@import "/home/kyle/.config/rofi/my-theme.rasi"

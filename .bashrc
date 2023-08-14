@@ -2,6 +2,9 @@ alias ..='cd ..'
 alias sha1='openssl sha1'
 alias untargz='tar -xvzf'
 
+alias day='redshift -P -O 8000 -m randr'
+alias night='redshift -P -O 2000 -m randr'
+
 #-------------------------------------------------------------
 # The 'ls' family (this assumes you use a recent GNU ls).
 #-------------------------------------------------------------
