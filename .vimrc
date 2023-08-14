@@ -49,6 +49,9 @@ set listchars=tab:\➝\ ,trail:·
 nnoremap <Home> ^
 inoremap <Home> <c-o>^
 
+"End key goes to VERY end in normal
+nnoremap <End> $<Right>
+
 "sorta easy tabbing"
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
@@ -128,8 +131,17 @@ nnoremap / :let @/ = ""<CR>/
 autocmd InsertLeave * :normal! `^
 set virtualedit=onemore
 
-"Backspace in visual mode deltes
+"Backspace in visual mode deletes
 vnoremap <Backspace> <Delete>
+
+"Backspace in normal backspaces
+nnoremap <Backspace> i<Backspace>
+
+"Delete doesn't yank
+nnoremap <Del> "_x
+
+"Return in normal mode starts insert on newline
+nnoremap <CR> i<CR>
 
 "Ctrl T opens new tab
 nnoremap <C-t> :tabnew<CR>
